@@ -1,0 +1,49 @@
+{% extends "padre_admin.html" %}
+{% load static %}
+{% block contenido %}
+        <section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'app_cursos/assets/img/about.jpg' %}" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    
+                                    <span class="section-heading-lower">Alumnos</span>
+                                </h2>
+                               
+                                <p>
+                                    <table class="table" class="mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th class="mb-0">N°</th>
+                                            <th class="mb-0">Nombre</th>
+                                            <th class="mb-0">Camada</th>
+                                            <th class="mb-0">Nacimiento</th>
+                                            <th class="mb-0">Acciones</th>
+                                          </tr>
+                                        </thead>
+                                        {% for alumno in datos %}
+                                        <tbody>
+                                            <tr>
+                                              <th class="mb-0">{{alumno.id}}</th>
+                                              <td>{{alumno.nombre}}</td>
+                                              <td>N°: {{alumno.camada}}</td>
+                                              <td>{{alumno.nacimiento}}</td>
+                                              <td>
+                                                <a href="{% url 'elimina_alumno'  alumno.id %}"><img src="{% static 'app_cursos/assets/eliminar.png' %}"></a>
+                                              <a href="{% url 'editar_alumno'  alumno.id %}"><img src="{% static 'app_cursos/assets/edit.png' %}"></a></td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}  
+                                    </table>          
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}       

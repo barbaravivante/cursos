@@ -1,0 +1,35 @@
+{% extends "padre.html" %}
+{% load static %}
+{% block contenido %}
+
+    <section class="page-section clearfix">
+        
+        <div class="container">
+        <p>
+            <a href="https://www.instagram.com/solvivante/" target="_blank"><img src="{% static 'app_cursos/assets/redes.png' %}" alt="redes">@solvivante</a>
+        
+            <a href="https://www.instagram.com/barbaravivante/" target="_blank"><img src="{% static 'app_cursos/assets/redes.png' %}" alt="redes">@barbaravivante</a>
+         </p>
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'app_cursos/assets/img/intro2.jpg' %}" alt="..." />
+                
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Hola! Gracias por visitarnos.</span>
+                        
+                    </h2>
+                    <p class="mb-3">
+                        Nosotras somos: Marisol y Barbara, desarrolladoras del sistema de cursos, te contamos un poco acerca de nosotras: somos hermanas y por distintos motivos de la vida vivimos un poco lejos, ya que Marisol vive en Bs As y yo en San Rafael Mza. .Pero a pesar de la distancia, seguimos muy conectadas y sobre todo trabajando juntas en forma remota!
+                        <p>Marisol es: Licenciada en administración de empresas, y yo: Licenciada en sistemas de información.</p> 
+                        Y juntas seguimos por el camino que nos lleve a seguir perfeccionándonos y aprendiendo distintas herramientas para seguir creciendo!
+                     </p>
+                     
+                        <span class="section-heading-lower">Te invitamos a que visites el sistema de cursos. Muchas gracias por pasar!</span>  
+                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{% url  'lista_cursos' %}">Ver Cursos!</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+{% endblock %} 
